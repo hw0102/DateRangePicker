@@ -70,6 +70,8 @@ public struct DateRangePicker: View {
 		selectionManager = .init(
 			calendar: calendar
 		)
+        
+        generateYears()
 	}
 	
 	public var body: some View {
@@ -160,7 +162,6 @@ public struct DateRangePicker: View {
 		.onAppear {
 			generateVisibleMonth(visibleMonth, year: visibleYear)
 			generateMonths(in: visibleYear)
-			generateYears()
 		}
 		.onChange(of: visibleMonth) { newValue in
 			generateVisibleMonth(newValue, year: visibleYear)
