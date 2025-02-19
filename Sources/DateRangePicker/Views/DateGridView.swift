@@ -18,7 +18,7 @@ struct DateGridView: View {
 	
 	var body: some View {
 		LazyVGrid(
-            columns: Array(repeating: GridItem(.flexible(), spacing: -10), count: numberOfDaysInAWeek),
+            columns: Array(repeating: GridItem(.flexible(), spacing: -50), count: numberOfDaysInAWeek),
 			alignment: .center,
 			spacing: 12
 		) {

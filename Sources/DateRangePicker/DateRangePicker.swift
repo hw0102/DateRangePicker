@@ -109,13 +109,13 @@ public struct DateRangePicker: View {
 				}
 				.padding(.trailing)
 			}
-            .padding(.horizontal, 8)
+            .padding(.horizontal, 27)
 			.padding(.bottom)
 			
 			switch mode {
 			case .calendar:
 				VStack {
-					HStack(spacing: -20) {
+					HStack(spacing: -60) {
 						ForEach(calendar.orderedShortWeekdaySymbols, id: \.self) { weekday in
 							Text(weekday.uppercased())
 								.foregroundColor(.secondary)
