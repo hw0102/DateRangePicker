@@ -76,7 +76,7 @@ public struct DateRangePicker: View {
 		VStack {
 			HStack(alignment: .center) {
 				Button(action: toggleMode) {
-					HStack {
+                    HStack {
 						Text(formattedMonthYear)
 							.foregroundColor(mode == .picker ? .accentColor : .primary)
 							.bold()
@@ -109,12 +109,13 @@ public struct DateRangePicker: View {
 				}
 				.padding(.trailing)
 			}
+            .padding(.horizontal, 8)
 			.padding(.bottom)
 			
 			switch mode {
 			case .calendar:
 				VStack {
-					HStack(spacing: 0) {
+					HStack(spacing: -20) {
 						ForEach(calendar.orderedShortWeekdaySymbols, id: \.self) { weekday in
 							Text(weekday.uppercased())
 								.foregroundColor(.secondary)
