@@ -15,7 +15,7 @@ struct DayCell: View {
 	
 	var body: some View {
 		Text(content)
-            .foregroundColor((isHighlighted || isSelected) ? Color(red: 0.78, green: 0.66, blue: 0.97) : (isEnabled) ? .primary : .secondary)
+            .foregroundColor((isHighlighted || isSelected) ? .accentColor : (isEnabled) ? .primary : .secondary)
 			.fontWeight(isSelected ? .bold : .regular)
 			.padding([.top, .bottom], 8)
 			.padding([.leading, .trailing], 8)
